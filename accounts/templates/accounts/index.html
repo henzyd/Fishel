@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/e5f8209f1b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="{% static 'Fishel/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'Fishel/accounts.css' %}" />
+    <title>Fishel</title>
+  </head>
+  <body>
+    <nav class="sign-up-nav">
+      <div class="logo">
+        <img
+          src="https://res.cloudinary.com/do2t27qdc/image/upload/v1666969176/FISHEL%20IMAGES/Vector_f2zgjh.png"
+          alt="Fishel-Logo"
+        />
+        <p>Fishel</p>
+      </div>
+      <div>
+        <p>Signup</p>
+        <p>Login</p>
+      </div>
+    </nav>
+    {% block contents %} {% endblock contents %}
+    <footer>
+      <div class="foot-content">
+        <div class="about">
+          <h3>About</h3>
+          <a href="#">About Fishel</a>
+          <a href="#">Features</a>
+          <a href="#">Testimonies</a>
+        </div>
+
+        <div class="events">
+          <h3>Events:</h3>
+          <a href="#">Educational Tips</a>
+          <a href="#">Announcements</a>
+          <a href="#">News</a>
+        </div>
+
+        <div class="community">
+          <h3>Community:</h3>
+          <a href="#">Post Questions</a>
+          <a href="#">Reviews</a>
+          <a href="#">Questions Rating</a>
+        </div>
+
+        <div class="contact">
+          <h3>Contact Us</h3>
+          <a href="#">INSTAGRAM</a>
+          <a href="#">FACEBOOK</a>
+          <a href="#">TWITTER</a>
+          <a href="#">081XXXXXXXX,091XXXXXXXX</a>
+          <a href="#">XXXX.XXXXXX@gmail.com</a>
+        </div>
+
+        <div class="address">
+          <h3>Address:</h3>
+          <a href="#">42, Montgomery Road Yaba, Lagos.</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

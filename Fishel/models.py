@@ -7,25 +7,51 @@ SUBJECT = (
     ('ENGLISH', 'English Language'),
 )
 
+DIFFICULTY_LEVEL = (
+    ('FOUNDATION', 'Foundation'),
+    ('HIGHER', 'Higher'),
+)
+
+
 # class GenerateQuestions(models.Model):
 #     subject = models.CharField(choices=SUBJECT, max_length=30, default=1)
 #     topics 
 
 
-class MathematicsFoundation(models.Model):
+# class Physics(models.Model):
+    # name = models.CharField(defualt='Physics', max_lenght=100)
+
+
+class PhysicsFoundation(models.Model):
+    topics = models.CharField(max_length=150)
+    def __str__(self) -> str:
+        return f'{self.topics}'
+
+
+class PhysicsHigher(models.Model):
     topics = models.CharField(max_length=150)
 
+    def __str__(self) -> str:
+        return f'{self.topics}'
 
-class MathematicsHigher(models.Model):
-    topics = models.CharField(max_length=150)
 
-
-class MathematicsFoundation_Images(models.Model):
+class PhysicsFoundation_Images(models.Model): ## NOTE: Name this Foundation_Images
     images = models.ImageField(upload_to='mathematics_foundation/')
-    topics = models.ForeignKey(MathematicsFoundation, on_delete=models.CASCADE)
+    topics = models.ForeignKey(PhysicsFoundation, on_delete=models.CASCADE)
+
+    def __str__(self) -> str:
+        return f'{self.images} --- {self.topics}'
 
 
-class MathematicsHigher_Images(models.Model):
+class PhysicsHigher_Images(models.Model):
     images = models.ImageField(upload_to='mathematics_higher/')
-    topics = models.ForeignKey(MathematicsHigher, on_delete=models.CASCADE)
+    topics = models.ForeignKey(PhysicsHigher, on_delete=models.CASCADE)
 
+    def __str__(self) -> str:
+        return f'{self.images} --- {self.topics}'
+
+
+
+class GenerateQuestions(models.Model):
+    subject = models.CharField(choices=SUBJECT, max_length=30)
+    difficulty_level = models.CharField(choices=DIFFICULTY_LEVEL, max_length=30)

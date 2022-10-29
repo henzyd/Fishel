@@ -14,9 +14,10 @@ CLASSES = (
 
 class CustomUser(AbstractUser):
     # pass
+    # username = models.CharField(max_length=150, blank=True, null=True)
     first_name = models.CharField(max_length=150, blank=False)
     last_name = models.CharField(max_length=150, blank=False)
-    email = models.EmailField(blank=False)
+    email = models.EmailField(blank=False, unique=True)
     teacher = models.BooleanField(blank=False, default=False)
     student = models.BooleanField(blank=False, default=False)
     school_attend = models.CharField(max_length=150, blank=True)
@@ -25,6 +26,7 @@ class CustomUser(AbstractUser):
     teacher_class_teach = models.CharField(max_length=150, blank=True)
     professional_qualification_file = models.FileField(upload_to='Prof_qual/', blank=True)
     professional_qualification_url = models.URLField(blank=False)
+
 
     def __str__(self) -> str:
         return f'{self.first_name} {self.username}'

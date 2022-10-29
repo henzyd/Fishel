@@ -261,6 +261,7 @@ main {
 footer {
   background-color: #e3f1f4;
   font-family: "Nunito", sans-serif;
+  /* width: 100vw; NOTE: I added this */
 }
 
 .foot-content {

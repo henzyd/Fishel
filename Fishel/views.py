@@ -15,8 +15,7 @@ def generating_questions(request):
             csv.field_size_limit(maxInt)
             break
         except OverflowError:
-            maxInt = int(maxInt/10)
-
+            maxInt = int(maxInt/10)   
     x = []
     num = 0
     with open('Fishel/Test/physics_highers.csv') as file_obj:
@@ -30,11 +29,11 @@ def generating_questions(request):
             while num > 0:
 
                 x.append(row[-1])
-    
+    # return redirect('home_page') 
     context = {
         'data_s': x
     }
-    return render(request, 'Fishel/index.html', context)
+    return render(request, 'Fishel/generate.html', context)
 
 
 def home(request):

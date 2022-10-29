@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+p {
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  /* overflow-x: hidden; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  background-color: #f0fcff;
+}
+
+.sign-up-nav {
+  padding-top: 22px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: inherit;
+  border-bottom: 1px solid #353c3e4d;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+}
+
+.sign-up-nav .logo p {
+  color: #083743;
+  font-size: 1.5em;
+  margin-left: 7px;
+  font-weight: 900;
+}
+
+.sign-up-nav div:nth-child(2) {
+  display: flex;
+  color: #083743;
+  gap: 30px;
+}
+
+.sign-up-nav div:nth-child(2) p {
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.signup_ {
+  color: #083743;
+  align-self: center;
+  font-weight: 900;
+  font-family: "Ubuntu", sans-serif;
+  margin-bottom: 30px;
+}
+
+#main {
+  width: 800px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 65px;
+}
+
+.controls input {
+  height: 48px;
+  background-color: #353c3e4d;
+  border: none;
+  border-radius: 8px;
+}
+
+.completed_btn {
+  padding-top: 20px;
+  font-weight: 800;
+}
+
+form .controls,
+form .controls input {
+  width: 100%;
+}
+
+form .controls .checkboxinput {
+  width: fit-content;
+}
+
+footer {
+  width: 100%;
+}
+
+/* .control-label {
+  display: none;
+} */
