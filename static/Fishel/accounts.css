@@ -12,6 +12,7 @@ p {
   font-family: "Ubuntu", sans-serif;
 }
 
+/* signup */
 body {
   /* overflow-x: hidden; */
   display: flex;
@@ -95,3 +96,17 @@ footer {
 /* .control-label {
   display: none;
 } */
+
+/*  */
+/*  */
+/*  */
+/*  */
+
+/* Login */
+.login_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}

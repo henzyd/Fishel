@@ -5,6 +5,7 @@ from .forms import UserRegistrationForm
 from django.contrib import messages
 from django.contrib.auth.hashers import make_password
 from .models import CustomUser
+from django.contrib.auth import authenticate, login
 # from rest_framework import status
 # from drf_yasg.utils import swagger_auto_schema
 
@@ -69,3 +70,17 @@ def user_create_view(request):
     return render(request, 'accounts/register.html', {'form': form})
 
 
+
+def user_login_view(request):
+    if request.method == 'POST':
+        user = {}
+        user['email'] = request.POST.get('email')
+        user['password'] = request.POST.get('paswword')
+        login(request, user)
+        # if user is None:
+        #     messages.error(request, 'Invalid input nitgtg')
+        #     return redirect('login')
+        # else:
+        #     messages.success(request, f' has logged in')
+        #     return redirect('home_page')
+    return render(request, 'accounts/login.html')

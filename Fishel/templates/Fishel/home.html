@@ -17,8 +17,12 @@
         </div>
 
         <div class="call">
-          <button class="btn1">Sign Up</button>
-          <button class="btn2">Login</button>
+          <a href="{% url 'register' %}"
+            ><button class="btn1">Sign Up</button></a
+          >
+          <a href="{% url 'login_page' %}"
+            ><button class="btn2">Login</button></a
+          >
         </div>
       </div>
     </nav>
@@ -30,8 +34,10 @@
         amet ipsum lacus libero at.
       </p>
       <div class="CTA">
-        <button class="btn-1">Start Answering Questions</button>
-        <button class="btn-2">Start Answering Questions</button>
+        <a href="{% url 'generate_questions' %}"
+          ><button class="btn-1">Start Generating Questions</button></a
+        >
+        <!-- <button class="btn-2">Start Answering Questions</button> -->
       </div>
     </div>
   </header>

@@ -16,3 +16,7 @@ class UserRegistrationForm(models.ModelForm, forms.Form):
         model = CustomUser
         fields = ['first_name', 'last_name', 'email', 'password', 'password_2', 'teacher', 'student', 'school_attend', 'student_class', 'teacher_school_teach', 'teacher_class_teach', 'professional_qualification_file', 'professional_qualification_url']
 
+
+# class LoginForm(forms.Form):
+#     email = forms.EmailField()
+#     password = forms.CharField(max_length=150)

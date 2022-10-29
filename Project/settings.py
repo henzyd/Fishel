@@ -143,5 +143,5 @@ STATICFILES_DIRS = [
 ]
 
 ####### this is for login
-# LOGIN_REDIRECT_URL = 'home_page'
-# LOGIN_URL = 'login_page'
+LOGIN_REDIRECT_URL = 'home_page'
+LOGIN_URL = 'login_page'
